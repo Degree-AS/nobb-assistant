@@ -67,6 +67,18 @@ Whichever option you use, once changes are pushed to the `main` branch,
 GitHub Pages automatically rebuilds the site (usually within ~1 minute, no
 extra action needed).
 
+### Option D — Let Claude do it (Claude Code)
+
+Instead of typing git commands or clicking buttons yourself, you describe the change in plain language and Claude runs the clone/edit/commit/push steps for you.
+
+- **Independent of Option A** — this does not use or require GitHub Desktop.
+- Needs Claude Code installed, plus Git installed separately (Claude Code doesn't bundle Git). If Git is missing, Claude Code will detect this on first run and walk you through installing it — you don't need to figure that out yourself in advance.
+- Claude can do the cloning step too — you don't need to clone manually first. Just give Claude the repo's HTTPS URL (copy it from the green **Code** button on the repo page — "HTTPS" tab).
+- **One-time authentication:** if the repo is private, the very first `git clone` on a given computer will ask you to authenticate with GitHub (e.g. via a browser popup, or `gh auth login`). This only needs to happen once per computer, not once per repo. While our repos stay public, this step isn't needed at all.
+- You still need write access to the GitHub repo — Claude acts using your own permissions, it doesn't bypass them.
+- Example prompt: "Clone https://github.com/Degree-AS/Gylling-design.git, change the button color to blue, and push it." Claude clones (if needed), edits the file, commits, and pushes — no manual git commands, no clicking through GitHub's UI, no GitHub Desktop involved.
+- Same end result as Option C, just driven by conversation instead of typed commands.
+
 ## Where to find the live URL
 
 ```
